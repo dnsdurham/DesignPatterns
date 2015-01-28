@@ -39,6 +39,31 @@ namespace DesignPatterns.Creational
             }
         }
 
+         private static void RunAbstractFactory()
+        {
+            AbstractFactory.CessnaFactory cessnaFactory = new AbstractFactory.CessnaFactory();
+            AbstractFactory.PiperFactory piperFactory = new AbstractFactory.PiperFactory();
+
+            AbstractFactory.ISingleEngineAirplane singleEngine;
+            AbstractFactory.IMultiEngineAirplane multiEngine;
+
+            Console.WriteLine("Creating Cessna SE, Piper ME...");
+
+            singleEngine = cessnaFactory.CreateSingleEngine();
+            multiEngine = piperFactory.CreateMultiEngine();
+
+            singleEngine.Fly();
+            multiEngine.Fly();
+
+            Console.WriteLine("Creating Piper SE, Cessna ME...");
+
+            singleEngine = piperFactory.CreateSingleEngine();
+            multiEngine = cessnaFactory.CreateMultiEngine();
+
+            singleEngine.Fly();
+            multiEngine.Fly();
+        }
+        
         private static void RunFactoryMethod()
         {
             FactoryMethod.AirplaneFactory airplaneFactory = new FactoryMethod.AirplaneFactory();
@@ -63,31 +88,6 @@ namespace DesignPatterns.Creational
 
             //airplane.Fly();
 
-        }
-
-        private static void RunAbstractFactory()
-        {
-            AbstractFactory.CessnaFactory cessnaFactory = new AbstractFactory.CessnaFactory();
-            AbstractFactory.PiperFactory piperFactory = new AbstractFactory.PiperFactory();
-
-            AbstractFactory.ISingleEngineAirplane singleEngine;
-            AbstractFactory.IMultiEngineAirplane multiEngine;
-
-            Console.WriteLine("Creating Cessna SE, Piper ME...");
-
-            singleEngine = cessnaFactory.CreateSingleEngine();
-            multiEngine = piperFactory.CreateMultiEngine();
-
-            singleEngine.Fly();
-            multiEngine.Fly();
-
-            Console.WriteLine("Creating Piper SE, Cessna ME...");
-
-            singleEngine = piperFactory.CreateSingleEngine();
-            multiEngine = cessnaFactory.CreateMultiEngine();
-
-            singleEngine.Fly();
-            multiEngine.Fly();
         }
 
         private static int InitConsoleMenu()
