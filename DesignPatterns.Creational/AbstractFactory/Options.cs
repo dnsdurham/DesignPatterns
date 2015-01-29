@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Remoting.Channels;
-using System.Text;
-using System.Threading.Tasks;
-// ReSharper disable UnusedMember.Global
-
+﻿
 namespace DesignPatterns.Creational.AbstractFactory
 {
     enum Resolution

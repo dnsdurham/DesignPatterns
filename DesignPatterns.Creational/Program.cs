@@ -1,7 +1,4 @@
 ﻿using System;
-using System.ComponentModel.Design;
-using System.Globalization;
-using System.Net;
 using DesignPatterns.Creational.AbstractFactory2;
 using DesignPatterns.Creational.FactoryMethod2;
 
