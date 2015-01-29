@@ -33,7 +33,7 @@ namespace DesignPatterns.Creational.AbstractFactory2
     {
         public void Draw()
         {
- 	        Console.WriteLine("I am a LOW resolution drawing!");
+            Console.WriteLine("I am a LOW resolution drawing!");
         }
     }
 
@@ -41,7 +41,7 @@ namespace DesignPatterns.Creational.AbstractFactory2
     {
         public void Draw()
         {
- 	        Console.WriteLine("I am a HIGH resolution drawing!");
+            Console.WriteLine("I am a HIGH resolution drawing!");
         }
     }
 
@@ -49,7 +49,7 @@ namespace DesignPatterns.Creational.AbstractFactory2
     {
         public void Print()
         {
- 	        Console.WriteLine("I am a LOW resolution print!");
+            Console.WriteLine("I am a LOW resolution print!");
         }
     }
 
@@ -57,9 +57,9 @@ namespace DesignPatterns.Creational.AbstractFactory2
     {
         public void Print()
         {
- 	        Console.WriteLine("I am a High resolution print!");
+            Console.WriteLine("I am a High resolution print!");
         }
     }		 
-	#endregion
+    #endregion
 
 }
