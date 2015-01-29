@@ -1,4 +1,9 @@
 ﻿using System;
+using System.ComponentModel.Design;
+using System.Globalization;
+using System.Net;
+using DesignPatterns.Creational.AbstractFactory2;
+using DesignPatterns.Creational.FactoryMethod2;
 
 namespace DesignPatterns.Creational
 {
@@ -15,13 +20,20 @@ namespace DesignPatterns.Creational
             {
                 switch (menuSelection)
                 {
-                    case 1: // Run Abstract Factory
-                        RunAbstractFactory();
+                    case 1: // Run Abstract Factory - Low Res
+                        RunDriverScenario(new LowResFactory());
                         break;
-                    case 2: // Run Factory Method
-                        RunFactoryMethod();
+                    case 2: // Run Abstract Factory Method - Hi Res
+                        RunDriverScenario(new HiResFactory());
                         break;
-                    case 3: // Run Service Locator
+                    case 3: // Run Factory Method for Oracle
+                        RunDatabaseScenario(FacDbType.Oracle);
+                        break;
+                    case 4: // Run Factory Method for Sql Server
+                        RunDatabaseScenario(FacDbType.SqlServer);
+                        break;
+                    case 5: // Run Factory Method for PostGres
+                        RunDatabaseScenario(FacDbType.PostGres);
                         break;
                     case 99:
                         exitApp = true;
@@ -36,35 +48,52 @@ namespace DesignPatterns.Creational
 
                 // re-initialize the menu selection
                 menuSelection = InitConsoleMenu();
+
             }
         }
 
-         private static void RunAbstractFactory()
+
+        #region Abstract Factory
+
+        private static void RunDriverScenario(IResolutionFactory factory)
         {
-            AbstractFactory.CessnaFactory cessnaFactory = new AbstractFactory.CessnaFactory();
-            AbstractFactory.PiperFactory piperFactory = new AbstractFactory.PiperFactory();
+            AfClient client = new AfClient(factory);
+
+            client.DoDraw();
+            client.DoPrint();
+        }
+        #endregion
+
+        #region Factory Method
+
+        private static void RunDatabaseScenario(FacDbType db)
+        {
+            FacClient client = new FacClient(new MyMyDbFactory());
+            client.GetTheData(db);
+        }
+        #endregion
+
+        #region Extras
+        private static void RunAirplaneAbFAcClient(AbstractFactory.IAirplaneFactory factory)
+        {
 
             AbstractFactory.ISingleEngineAirplane singleEngine;
             AbstractFactory.IMultiEngineAirplane multiEngine;
 
-            Console.WriteLine("Creating Cessna SE, Piper ME...");
+            Console.WriteLine("Creating Single engine...");
 
-            singleEngine = cessnaFactory.CreateSingleEngine();
-            multiEngine = piperFactory.CreateMultiEngine();
-
-            singleEngine.Fly();
-            multiEngine.Fly();
-
-            Console.WriteLine("Creating Piper SE, Cessna ME...");
-
-            singleEngine = piperFactory.CreateSingleEngine();
-            multiEngine = cessnaFactory.CreateMultiEngine();
+            singleEngine = factory.CreateSingleEngine();
 
             singleEngine.Fly();
+
+            Console.WriteLine("Creating multi-engine...");
+
+            multiEngine = factory.CreateMultiEngine();
+
             multiEngine.Fly();
         }
-        
-        private static void RunFactoryMethod()
+
+        private static void FaClient()
         {
             FactoryMethod.AirplaneFactory airplaneFactory = new FactoryMethod.AirplaneFactory();
 
@@ -90,15 +119,19 @@ namespace DesignPatterns.Creational
 
         }
 
+        #endregion
+
         private static int InitConsoleMenu()
         {
             int result;
  
             Console.WriteLine("");
             Console.WriteLine("Select desired option:");
-            Console.WriteLine(" 1: Abstract Factory");
-            Console.WriteLine(" 2: Factory Method");
-            Console.WriteLine(" 3: Service Locator");
+            Console.WriteLine(" 1: Abstract Factory - Low Res");
+            Console.WriteLine(" 2: Abstract Factory - Hi Res");
+            Console.WriteLine(" 3: Factory Method - Oracle");
+            Console.WriteLine(" 4: Factory Method - Sql Server");
+            Console.WriteLine(" 5: Factory Method - PostGres");
             Console.WriteLine("99: exit");
             string selection = Console.ReadLine();
             if (int.TryParse(selection, out result) == false)

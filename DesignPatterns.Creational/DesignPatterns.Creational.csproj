@@ -41,9 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactory2\Classes.cs" />
+    <Compile Include="AbstractFactory2\Factories.cs" />
+    <Compile Include="AbstractFactory2\Interfaces.cs" />
     <Compile Include="AbstractFactory\Classes.cs" />
     <Compile Include="AbstractFactory\Factories.cs" />
     <Compile Include="AbstractFactory\Interfaces.cs" />
+    <Compile Include="AbstractFactory\Options.cs" />
+    <Compile Include="FactoryMethod2\Classes.cs" />
+    <Compile Include="FactoryMethod2\Enums.cs" />
+    <Compile Include="FactoryMethod2\Factories.cs" />
+    <Compile Include="FactoryMethod2\Interfaces.cs" />
     <Compile Include="FactoryMethod\Classes.cs" />
     <Compile Include="FactoryMethod\Enums.cs" />
     <Compile Include="FactoryMethod\Factories.cs" />
@@ -53,6 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ServiceLocator\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
