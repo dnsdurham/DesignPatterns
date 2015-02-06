@@ -43,12 +43,16 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Singleton\Interfaces.cs" />
     <Compile Include="Singleton\SampleSingleton.cs" />
+    <Compile Include="Webserver\Factories.cs" />
+    <Compile Include="Webserver\Interfaces.cs" />
+    <Compile Include="Webserver\RequestHandler.cs" />
+    <Compile Include="Webserver\WebLogger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

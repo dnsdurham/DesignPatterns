@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="SampleSingletonTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Webserver2Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DesignPatterns.Creational.Singleton\Singleton.csproj">

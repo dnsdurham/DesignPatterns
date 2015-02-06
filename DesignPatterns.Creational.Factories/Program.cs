@@ -6,7 +6,7 @@ namespace DesignPatterns.Creational.Factories
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
 
             bool exitApp = false;

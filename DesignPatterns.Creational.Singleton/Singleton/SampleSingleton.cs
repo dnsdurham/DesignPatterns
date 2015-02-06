@@ -1,7 +1,7 @@
 ﻿
 namespace DesignPatterns.Creational.Singleton
 {
-    public class SampleSingleton :ISampleSingleton
+    public class SampleSingleton
     {
         // static instance of the singleton
         //private static SampleSingleton _instance = null; // not thread-safe
