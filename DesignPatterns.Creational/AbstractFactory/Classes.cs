@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPatterns.Creational.AbstractFactory
+namespace DesignPatterns.Creational.Factories.AbstractFactory
 {
     class CessnaSingleEngine : ISingleEngineAirplane
     {

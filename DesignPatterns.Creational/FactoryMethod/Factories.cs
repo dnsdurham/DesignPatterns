@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPatterns.Creational.FactoryMethod
+namespace DesignPatterns.Creational.Factories.FactoryMethod
 {
     public class AirplaneFactory : IAirplaneFactory
     {

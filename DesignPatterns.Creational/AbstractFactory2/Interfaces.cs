@@ -1,6 +1,6 @@
 ﻿
 
-namespace DesignPatterns.Creational.AbstractFactory2
+namespace DesignPatterns.Creational.Factories.AbstractFactory2
 {
     public interface IDisplayDriver
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace DesignPatterns.Creational.FactoryMethod2
+namespace DesignPatterns.Creational.Factories.FactoryMethod2
 {
     public interface IMyDbFactory
     {

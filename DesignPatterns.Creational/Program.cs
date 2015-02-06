@@ -1,8 +1,8 @@
 ﻿using System;
-using DesignPatterns.Creational.AbstractFactory2;
-using DesignPatterns.Creational.FactoryMethod2;
+using DesignPatterns.Creational.Factories.AbstractFactory2;
+using DesignPatterns.Creational.Factories.FactoryMethod2;
 
-namespace DesignPatterns.Creational
+namespace DesignPatterns.Creational.Factories
 {
     class Program
     {

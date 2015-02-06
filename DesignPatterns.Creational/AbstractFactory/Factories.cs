@@ -1,5 +1,5 @@
 ﻿
-namespace DesignPatterns.Creational.AbstractFactory
+namespace DesignPatterns.Creational.Factories.AbstractFactory
 {
     public class CessnaFactory : IAirplaneFactory
     {

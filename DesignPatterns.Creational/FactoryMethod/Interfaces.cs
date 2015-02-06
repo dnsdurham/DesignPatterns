@@ -1,5 +1,5 @@
 ﻿
-namespace DesignPatterns.Creational.FactoryMethod
+namespace DesignPatterns.Creational.Factories.FactoryMethod
 {
     public interface IAirplane
     {
