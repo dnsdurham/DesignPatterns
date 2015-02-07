@@ -50,6 +50,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Mocks\WebLogger2Mock.cs" />
+    <Compile Include="Mocks\Webserver2FactoryMock.cs" />
     <Compile Include="SampleSingletonTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Webserver2Tests.cs" />

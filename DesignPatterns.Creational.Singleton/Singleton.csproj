@@ -44,6 +44,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singleton\SampleSingleton.cs" />
+    <Compile Include="Webserver2\Factories.cs" />
+    <Compile Include="Webserver2\Interfaces.cs" />
+    <Compile Include="Webserver2\RequestHandler2.cs" />
+    <Compile Include="Webserver2\WebLogger2.cs" />
     <Compile Include="Webserver\Factories.cs" />
     <Compile Include="Webserver\Interfaces.cs" />
     <Compile Include="Webserver\RequestHandler.cs" />

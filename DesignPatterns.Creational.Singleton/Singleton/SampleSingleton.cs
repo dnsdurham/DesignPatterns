@@ -17,7 +17,8 @@ namespace DesignPatterns.Creational.Singleton
         {
             get
             {
-                //if (_instance == null) // not thread-safe
+                // not thread-safe
+                //if (_instance == null) 
                 //{
                 //    _instance = new SampleSingleton();
                 //}

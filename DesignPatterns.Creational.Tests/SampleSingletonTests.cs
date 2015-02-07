@@ -18,7 +18,7 @@ namespace DesignPatterns.Creational.Tests
             SampleSingleton s1 = SampleSingleton.GetInstance;
             SampleSingleton s2 = SampleSingleton.GetInstance;
 
-            // verify that both objects variables are referencing same instance
+            // verify that both object variables are referencing same instance
             Assert.AreSame(s1, s2);
 
             // use the MyCounter to do a similar verifications
