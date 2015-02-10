@@ -3,7 +3,7 @@
 namespace DesignPatterns.Creational.Webserver
 {
     /// <summary>
-    /// This class implements a webservers logfile writing as a class Singleton
+    /// This class implements a webserver's logfile writing as a classic Singleton
     /// </summary>
     public class WebLogger
     {

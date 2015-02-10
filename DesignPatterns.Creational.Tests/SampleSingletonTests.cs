@@ -21,7 +21,7 @@ namespace DesignPatterns.Creational.Tests
             // verify that both object variables are referencing same instance
             Assert.AreSame(s1, s2);
 
-            // use the MyCounter to do a similar verifications
+            // use the MyCounter to do a similar verification
             Assert.AreEqual(0, s1.MyCounter);
             s2.MyCounter = 7;
             Assert.AreEqual(7, s1.MyCounter);

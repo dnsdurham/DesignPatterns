@@ -10,7 +10,7 @@ namespace DesignPatterns.Creational.Webserver
             // ...
 
             // log the request
-            WebLogger log = WebLogger.GetInstance;
+            WebLogger log = WebLogger.GetInstance; // using classic Singleton access
             log.WriteEntry(DateTime.Now + " " + request);
 
             return "Request result";

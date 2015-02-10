@@ -16,7 +16,7 @@ namespace DesignPatterns.Creational.Webserver2
             // ...
 
             // log the request
-            IWebLogger2 logger = _factory.GetWebLogger();
+            IWebLogger2 logger = _factory.GetWebLogger(); // using Factory Method
 
             logger.WriteEntry(DateTime.Now + " " + request);
 

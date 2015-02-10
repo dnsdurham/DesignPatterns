@@ -1,10 +1,7 @@
-﻿using DesignPatterns.Creational.Webserver;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using DesignPatterns.Creational.Webserver;
 using DesignPatterns.Creational.Webserver2;
 
 namespace DesignPatterns.Creational.Singleton
@@ -48,9 +45,10 @@ namespace DesignPatterns.Creational.Singleton
         private static void RunWebserver(IWebserverFactory factory)
         {
             // create a couple of handlers
-            IRequestHandler handler1 = factory.GetRequestHandler();
-            IRequestHandler handler2 = factory.GetRequestHandler();
+            IRequestHandler handler1 = factory.GetRequestHandler(); // using Factory Method
+            IRequestHandler handler2 = factory.GetRequestHandler(); // using Factory Method
 
+            // simulate handling incoming requests using two separate handler threads...
             Task[] tasks = new Task[2];
 
             tasks[0] = Task.Factory.StartNew(WebserverRequestSimulator1, handler1);
@@ -92,9 +90,10 @@ namespace DesignPatterns.Creational.Singleton
         private static void RunWebserver2(IWebserver2Factory factory)
         {
             // create a couple of handlers
-            IRequestHandler2 handler1 = factory.GetRequestHandler(factory);
-            IRequestHandler2 handler2 = factory.GetRequestHandler(factory);
+            IRequestHandler2 handler1 = factory.GetRequestHandler(factory); // using Factory Method with factory parameter
+            IRequestHandler2 handler2 = factory.GetRequestHandler(factory); // using Factory Method with factory parameter
 
+            // simulate handling incoming requests using two separate handler threads...
             Task[] tasks = new Task[2];
 
             tasks[0] = Task.Factory.StartNew(Webserver2RequestSimulator1, handler1);
