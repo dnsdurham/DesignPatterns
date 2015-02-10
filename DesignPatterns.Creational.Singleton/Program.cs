@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using DesignPatterns.Creational.Webserver;
-using DesignPatterns.Creational.Webserver2;
+using DesignPatterns.Creational.Singleton.Webserver;
+using DesignPatterns.Creational.Singleton.Webserver2;
 
 namespace DesignPatterns.Creational.Singleton
 {

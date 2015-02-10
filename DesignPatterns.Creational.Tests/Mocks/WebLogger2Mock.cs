@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DesignPatterns.Creational.Webserver2;
+using DesignPatterns.Creational.Singleton.Webserver2;
 
 namespace DesignPatterns.Creational.Tests.Mocks
 {

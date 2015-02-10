@@ -1,5 +1,5 @@
 ﻿
-namespace DesignPatterns.Creational.Singleton
+namespace DesignPatterns.Creational.Singleton.Sample
 {
     public class SampleSingleton
     {

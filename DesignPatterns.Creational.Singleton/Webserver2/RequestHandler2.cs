@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPatterns.Creational.Webserver2
+namespace DesignPatterns.Creational.Singleton.Webserver2
 {
     public class RequestHandler2 : IRequestHandler2
     {
