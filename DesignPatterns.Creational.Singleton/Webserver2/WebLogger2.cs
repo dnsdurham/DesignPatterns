@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace DesignPatterns.Creational.Webserver2
+namespace DesignPatterns.Creational.Singleton.Webserver2
 {
     public class WebLogger2 : IWebLogger2
     {

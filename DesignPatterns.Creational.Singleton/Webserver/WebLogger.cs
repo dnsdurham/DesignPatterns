@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace DesignPatterns.Creational.Webserver
+namespace DesignPatterns.Creational.Singleton.Webserver
 {
     /// <summary>
     /// This class implements a webserver's logfile writing as a classic Singleton

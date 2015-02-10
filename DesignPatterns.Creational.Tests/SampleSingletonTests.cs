@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
+using DesignPatterns.Creational.Singleton.Sample;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DesignPatterns.Creational.Singleton;
 
 namespace DesignPatterns.Creational.Tests
 {

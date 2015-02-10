@@ -1,5 +1,5 @@
 ﻿
-namespace DesignPatterns.Creational.Webserver
+namespace DesignPatterns.Creational.Singleton.Webserver
 {
 
     public interface IWebserverFactory

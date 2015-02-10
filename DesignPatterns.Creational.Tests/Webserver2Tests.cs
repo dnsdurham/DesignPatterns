@@ -1,7 +1,5 @@
-﻿using System;
+﻿using DesignPatterns.Creational.Singleton.Webserver2;
 using DesignPatterns.Creational.Tests.Mocks;
-using DesignPatterns.Creational.Webserver;
-using DesignPatterns.Creational.Webserver2;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DesignPatterns.Creational.Tests

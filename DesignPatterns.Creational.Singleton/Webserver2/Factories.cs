@@ -1,5 +1,5 @@
 ﻿
-namespace DesignPatterns.Creational.Webserver2
+namespace DesignPatterns.Creational.Singleton.Webserver2
 {
     public class Webserver2Factory : IWebserver2Factory
     {
