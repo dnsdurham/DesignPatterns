@@ -1,5 +1,7 @@
 ﻿
 using System;
+using System.Text;
+
 namespace DesignPatterns.Behavioral.Strategy.OrderProcessing
 {
     public class Order : IOrder
@@ -24,5 +26,58 @@ namespace DesignPatterns.Behavioral.Strategy.OrderProcessing
 
             return (itemNumber * itemPrice) + tax;
         }
+
+        #region Process Using Switches
+         //public enum OrderCountryType
+        //{
+        //    US,
+        //    Canada,
+        //    Germany,
+        //    England
+        //}
+        //public decimal Process()
+        //{
+        //    var orderCountry = OrderCountryType.US;
+        //    bool inQuebec = true;
+
+        //    // Order processing logic here...
+        //    // ...
+        //    // Handle tax rules...
+        //    switch (orderCountry)
+        //    {
+        //        case OrderCountryType.US:
+        //            // implement US Tax rules here
+        //            break;
+        //        case OrderCountryType.Canada:
+        //            // Implement Canada tax rules here
+        //            break;
+        //        case OrderCountryType.Germany:
+        //            // Implement Euro tax rules here
+        //            break;
+        //    }
+        //    //Handle language rules...
+        //    switch (orderCountry)
+        //    {
+        //        case OrderCountryType.US:
+        //        case OrderCountryType.Canada:
+        //            if (inQuebec)
+        //            {
+        //                // use French
+        //                // ReSharper disable once RedundantJumpStatement
+        //                break;
+        //            }
+        //            // use English
+        //            break;
+        //        case OrderCountryType.Germany:
+        //            // Use German
+        //            break;
+        //    }
+        //    // ...
+        //    // More order processing logic here...
+
+        //    return 0.00m;
+        //}
+       
+        #endregion
     }
 }
