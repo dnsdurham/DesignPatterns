@@ -37,6 +37,11 @@ namespace DesignPatterns.Behavioral.Strategy
             }
         }
 
+        /// <summary>
+        /// Simulates a call to process an order
+        /// </summary>
+        /// <param name="taxCalculator">This parameter would be determined by logic/config 
+        /// elsewhere that contained business rules that would determine which tax formula to use</param>
         private static void ProcessOrder(ICalculateTax taxCalculator)
         {
             IOrder order = new Order(); // NOTE: We would normally use a factory or something to create the Order class
