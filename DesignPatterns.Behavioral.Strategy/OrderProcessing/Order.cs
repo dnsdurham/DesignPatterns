@@ -1,6 +1,4 @@
-﻿
-using System;
-using System.Text;
+﻿using System;
 
 namespace DesignPatterns.Behavioral.Strategy.OrderProcessing
 {
